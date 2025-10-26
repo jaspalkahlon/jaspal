@@ -1,0 +1,78 @@
+# Fashion Guru Bot Configuration
+# Your Digital Atelier Assistant
+
+bot:
+  name: "Fashion Guru Bot"
+  version: "1.0.0"
+  description: "Your Digital Atelier Assistant - Guru-Shishya Parampara for Fashion Education"
+
+# Pillar 1: Technical Mastery
+pillar1:
+  pattern_intelligence:
+    enabled: true
+    difficulty_levels: ["beginner", "intermediate", "advanced"]
+
+  fabric_oracle:
+    enabled: true
+    price_range_support: true
+
+  troubleshooting:
+    enabled: true
+    diagnostic_mode: "socratic"
+
+# Pillar 2: Creative Evolution
+pillar2:
+  trend_synthesis:
+    enabled: true
+    update_frequency: "weekly"
+    sources: ["runway", "street_style", "social_media"]
+
+  color_psychology:
+    enabled: true
+    cultural_awareness: true
+    skin_tone_matching: true
+
+  design_critique:
+    enabled: true
+    method: "socratic"
+    feedback_style: "constructive"
+
+# API Configuration
+api:
+  host: "0.0.0.0"
+  port: 5000
+  debug: false
+  cors_enabled: true
+
+# Webhook Configuration
+webhooks:
+  enabled: false
+  platforms:
+    slack:
+      enabled: false
+      signing_secret: "${SLACK_SIGNING_SECRET}"
+    discord:
+      enabled: false
+      token: "${DISCORD_TOKEN}"
+    telegram:
+      enabled: false
+      token: "${TELEGRAM_TOKEN}"
+
+# Conversation Settings
+conversation:
+  max_history: 50
+  default_skill_level: "beginner"
+  context_timeout_minutes: 30
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  file: "fashion_guru_bot.log"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+# Feature Flags
+features:
+  multilingual: false
+  voice_support: false
+  image_analysis: false
+  pattern_generation: false
