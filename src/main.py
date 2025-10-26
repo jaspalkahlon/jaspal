@@ -123,6 +123,25 @@ def run_cli_mode(bot: FashionGuruBot):
             logging.error(f"Error in CLI mode: {str(e)}")
 
 
+def create_app():
+    """
+    Create Flask app instance (for production deployment with gunicorn)
+
+    Returns:
+        Flask app instance
+    """
+    # Load config
+    config = load_config('config/config.yaml')
+
+    # Setup logging
+    log_level = config.get('logging', {}).get('level', 'INFO')
+    setup_logging(log_level)
+
+    # Create and return API
+    api = create_api(config)
+    return api.app
+
+
 def run_api_mode(config: Dict[str, Any]):
     """
     Run bot in API mode
