@@ -55,3 +55,7 @@ fashion_guru_bot.log
 contexts/
 *.db
 *.sqlite
+
+# Google Cloud SDK
+google-cloud-sdk/
+google-cloud-cli-*.tar.gz
